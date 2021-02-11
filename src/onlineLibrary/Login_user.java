@@ -82,6 +82,41 @@ public  class Login_user extends JFrame implements ActionListener{
 	panel.add(panel2);
 	}
 	public void actionPerformed(ActionEvent ae) {
+		if(ae.getSource()==b1) {
+			Boolean status=false;
+			try {
+				//Connection class
+				Conn con=new Conn();
+				//Sql statement as string
+				String sql ="select * from account where username=? and password=?";
+				//Prepare statement for executing query from database
+				PreparedStatement st = con.c.prepareStatement(sql);
+				
+				//Replace the ? in sql string  with th username and password from the database
+				st.setString(1,textField.getText());
+				st.setString(2, passwordField.getText());
+				
+				//ResultSet = Execute data line by line 
+				ResultSet rs = st.executeQuery();
+				if(rs.next()) {
+					this.setVisible(false);
+					new Loading().setVisible(true);
+				} else
+					JOptionPane.showMessageDialog(null, "Invalid username and password");
+			}catch (Exception e2) {
+				e2.printStackTrace();
+			}
+				if(ae.getSource()==b2) {
+					this.setVisible(false);
+					new Signup().setVisible(true);
+				}
+				
+				if(ae.getSource()==b3) {
+					this.setVisible(false);
+					new ForgetPassword().setVisible(true);
+				}
+			
+		}
 		
 	}
 	public static void main(String[] args) {

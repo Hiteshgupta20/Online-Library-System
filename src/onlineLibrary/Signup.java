@@ -145,6 +145,7 @@ public class Signup extends JFrame implements ActionListener{
     		textField_1.setText("");
     		passwordField_2.setText("");
     		textField_3.setText("");
+    		
     		}	
     		}
     		if(ae.getSource()==b2) {

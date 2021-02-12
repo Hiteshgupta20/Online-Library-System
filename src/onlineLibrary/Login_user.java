@@ -113,7 +113,7 @@ public  class Login_user extends JFrame implements ActionListener{
 				
 				if(ae.getSource()==b3) {
 					this.setVisible(false);
-					new ForgetPassword().setVisible(true);
+					new Forgot().setVisible(true);
 				}
 			
 		}

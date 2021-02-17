@@ -19,11 +19,12 @@ public class IssueBook extends JFrame implements ActionListener{
     }
 
     public IssueBook() {
-        setBounds(300, 200, 900, 500);
+	setBounds(300, 200, 900, 500);
+	setLocation(300,150);
 	contentPane = new JPanel();
 	contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 	setContentPane(contentPane);
-        contentPane.setBackground(Color.WHITE);
+    contentPane.setBackground(Color.WHITE);
 	contentPane.setLayout(null);
 
 	JLabel l1 = new JLabel("Book_id");

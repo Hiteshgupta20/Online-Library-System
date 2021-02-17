@@ -44,6 +44,7 @@ public class ReturnBook extends JFrame implements ActionListener{
     
     public ReturnBook() {
     setBounds(450, 300, 617, 363);
+    setLocation(350,150);
 	contentPane = new JPanel();
 	contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 	setContentPane(contentPane);

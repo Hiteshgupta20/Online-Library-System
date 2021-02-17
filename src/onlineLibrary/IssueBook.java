@@ -1,5 +1,4 @@
 package onlineLibrary;
-
 import java.awt.*;
 import javax.swing.*;
 import javax.swing.border.*;
@@ -11,7 +10,7 @@ public class IssueBook extends JFrame implements ActionListener{
 
     private JPanel contentPane;
     JDateChooser dateChooser;
-    private JTextField t1,t2,t3,t4,t5,t6,t7,t8,t9,t10,t11,t12,t13;
+    private JTextField t1,t2,t3,t4,t5,t6,t7,t8,t9,t10,t11,t12,t13,t14;
     private JButton b1,b2,b3,b4;
 
     public static void main(String[] args) {
@@ -20,11 +19,11 @@ public class IssueBook extends JFrame implements ActionListener{
     }
 
     public IssueBook() {
-    setBounds(300, 200, 900, 500);
+        setBounds(300, 200, 900, 500);
 	contentPane = new JPanel();
 	contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 	setContentPane(contentPane);
-    contentPane.setBackground(Color.WHITE);
+        contentPane.setBackground(Color.WHITE);
 	contentPane.setLayout(null);
 
 	JLabel l1 = new JLabel("Book_id");
@@ -73,10 +72,11 @@ public class IssueBook extends JFrame implements ActionListener{
 	b1 = new JButton("Search");
 	b1.addActionListener(this);
 	b1.setBorder(new LineBorder(new Color(192, 192, 192), 1, true));
-    b1.setBackground(Color.BLACK);
-    b1.setForeground(Color.WHITE);
+        b1.setBackground(Color.BLACK);
+        b1.setForeground(Color.WHITE);
 	b1.setFont(new Font("Trebuchet MS", Font.BOLD, 14));
 	b1.setBounds(234, 59, 100, 30);
+        
 	contentPane.add(b1);
 
 	t2 = new JTextField();
@@ -125,7 +125,7 @@ public class IssueBook extends JFrame implements ActionListener{
 				TitledBorder.LEADING, TitledBorder.TOP, null, new Color(34, 139, 34)));
 	panel.setFont(new Font("Tahoma", Font.BOLD, 14));
 	panel.setBounds(10, 38, 345, 288);
-    panel.setBackground(Color.WHITE);
+        panel.setBackground(Color.WHITE);
 	contentPane.add(panel);
 
 	JLabel l8 = new JLabel("Student_id");
@@ -170,36 +170,28 @@ public class IssueBook extends JFrame implements ActionListener{
 	l14.setBounds(384, 336, 100, 23);
 	contentPane.add(l14);
 
-	t7 = new JTextField();
-	t7.setForeground(new Color(47, 79, 79));
-	t7.setFont(new Font("Trebuchet MS", Font.BOLD, 14));
-	t7.setColumns(10);
-	t7.setBounds(508, 66, 86, 20);
-	contentPane.add(t7);
+	t8 = new JTextField();
+	t8.setForeground(new Color(47, 79, 79));
+	t8.setFont(new Font("Trebuchet MS", Font.BOLD, 14));
+	t8.setColumns(10);
+	t8.setBounds(508, 66, 86, 20);
+	contentPane.add(t8);
 
 	b2 = new JButton("Search");
 	b2.addActionListener(this);
 	b2.setFont(new Font("Trebuchet MS", Font.BOLD, 14));
 	b2.setBorder(new LineBorder(new Color(192, 192, 192), 1, true));
 	b2.setBounds(604, 59, 100, 30);
-    b2.setBackground(Color.BLACK);
-    b2.setForeground(Color.WHITE);
+        b2.setBackground(Color.BLACK);
+        b2.setForeground(Color.WHITE);
 	contentPane.add(b2);
-
-	t8 = new JTextField();
-	t8.setForeground(new Color(47, 79, 79));
-	t8.setFont(new Font("Trebuchet MS", Font.BOLD, 14));
-	t8.setEditable(false);
-	t8.setColumns(10);
-	t8.setBounds(508, 106, 208, 20);
-	contentPane.add(t8);
 
 	t9 = new JTextField();
 	t9.setForeground(new Color(47, 79, 79));
 	t9.setFont(new Font("Trebuchet MS", Font.BOLD, 14));
 	t9.setEditable(false);
 	t9.setColumns(10);
-	t9.setBounds(508, 150, 208, 20);
+	t9.setBounds(508, 106, 208, 20);
 	contentPane.add(t9);
 
 	t10 = new JTextField();
@@ -207,7 +199,7 @@ public class IssueBook extends JFrame implements ActionListener{
 	t10.setFont(new Font("Trebuchet MS", Font.BOLD, 14));
 	t10.setEditable(false);
 	t10.setColumns(10);
-	t10.setBounds(508, 190, 208, 20);
+	t10.setBounds(508, 150, 208, 20);
 	contentPane.add(t10);
 
 	t11 = new JTextField();
@@ -215,7 +207,7 @@ public class IssueBook extends JFrame implements ActionListener{
 	t11.setFont(new Font("Trebuchet MS", Font.BOLD, 14));
 	t11.setEditable(false);
 	t11.setColumns(10);
-	t11.setBounds(508, 236, 208, 20);
+	t11.setBounds(508, 190, 208, 20);
 	contentPane.add(t11);
 
 	t12 = new JTextField();
@@ -223,24 +215,31 @@ public class IssueBook extends JFrame implements ActionListener{
 	t12.setFont(new Font("Trebuchet MS", Font.BOLD, 14));
 	t12.setEditable(false);
 	t12.setColumns(10);
-	t12.setBounds(508, 286, 208, 20);
+	t12.setBounds(508, 236, 208, 20);
 	contentPane.add(t12);
-	
+
 	t13 = new JTextField();
 	t13.setForeground(new Color(47, 79, 79));
 	t13.setFont(new Font("Trebuchet MS", Font.BOLD, 14));
 	t13.setEditable(false);
 	t13.setColumns(10);
-	t13.setBounds(508, 333, 208, 20);
+	t13.setBounds(508, 286, 208, 20);
 	contentPane.add(t13);
 
+	t14 = new JTextField();
+	t14.setForeground(new Color(47, 79, 79));
+	t14.setFont(new Font("Trebuchet MS", Font.BOLD, 14));
+	t14.setEditable(false);
+	t14.setColumns(10);
+	t14.setBounds(508, 338, 208, 20);
+	contentPane.add(t14);
 
 	JPanel panel_1 = new JPanel();
 	panel_1.setBorder(new TitledBorder(new LineBorder(new Color(70, 130, 180), 2, true), "Student-Deatails",
 			TitledBorder.LEADING, TitledBorder.TOP, null, new Color(100, 149, 237)));
 	panel_1.setForeground(new Color(0, 100, 0));
 	panel_1.setBounds(360, 38, 378, 372);
-    panel_1.setBackground(Color.WHITE);
+        panel_1.setBackground(Color.WHITE);
 	contentPane.add(panel_1);
         
 	JLabel l15 = new JLabel(" Date of Issue :");
@@ -261,8 +260,8 @@ public class IssueBook extends JFrame implements ActionListener{
 	b3.setBorder(new LineBorder(new Color(192, 192, 192), 1, true));
 	b3.setBounds(47, 377, 118, 33);
 	b3.setBackground(Color.BLACK);
-    b3.setForeground(Color.WHITE);
-    contentPane.add(b3);
+        b3.setForeground(Color.WHITE);
+        contentPane.add(b3);
 
 	b4 = new JButton("Back");
 	b4.addActionListener(this);
@@ -270,76 +269,78 @@ public class IssueBook extends JFrame implements ActionListener{
 	b4.setBorder(new LineBorder(new Color(192, 192, 192), 1, true));
 	b4.setBounds(199, 377, 100, 33);
 	b4.setBackground(Color.BLACK);
-    b4.setForeground(Color.WHITE);
-    contentPane.add(b4);
+        b4.setForeground(Color.WHITE);
+        contentPane.add(b4);
     }
     
     public void actionPerformed(ActionEvent ae){
         try{
-        	Conn con = new Conn();
-        	if(ae.getSource()==b1) {
-        	String sql = "select * from book where book_id=?";
-        	PreparedStatement st = con.c.prepareStatement(sql);
-        	st.setString(1, t1.getText());
-        	ResultSet rs= st.executeQuery();
-        	
-        	while(rs.next()) {
-        		t2.setText(rs.getString("name"));
-        		t3.setText(rs.getString("isbn"));
-        		t4.setText(rs.getString("publisher"));
-        		t5.setText(rs.getString("price"));
-        		t6.setText(rs.getString("pages"));
-        	}
-        	st.close();
-        	rs.close();
-        }
-        	if(ae.getSource()==b2) {
-        		String sql = "select * from student where student_id=?";
-            	PreparedStatement st = con.c.prepareStatement(sql);
-            	st.setString(1, t7.getText());
-            	ResultSet rs= st.executeQuery();
-            	
-            	while(rs.next()) {
-            		t8.setText(rs.getString("name"));
-            		t9.setText(rs.getString("father"));
-            		t10.setText(rs.getString("course"));
-            		t11.setText(rs.getString("branch"));
-            		t12.setText(rs.getString("year"));
-            		t13.setText(rs.getString("semester"));
-            	}
-            	st.close();
-            	rs.close();
-        	}
-        	
-        	if(ae.getSource() == b3){
-                try{
-            String sql = "insert into issueBook(book_id, student_id, bname, sname, course, branch, dateOfIssue) values(?, ?, ?, ?, ?, ?, ?)";
-	PreparedStatement st = con.c.prepareStatement(sql);
-	st.setString(1, t1.getText());
-	st.setString(2, t7.getText());
-	st.setString(3, t2.getText());
-	st.setString(4, t8.getText());
-	st.setString(5, t10.getText());
-	st.setString(6, t11.getText());
-	st.setString(7, ((JTextField) dateChooser.getDateEditor().getUiComponent()).getText());
-	int i = st.executeUpdate();
-	if (i > 0)
-                JOptionPane.showMessageDialog(null, "Successfully Book Issued..!");
-	else
-                JOptionPane.showMessageDialog(null, "error");
-                }catch(Exception e){
-                    e.printStackTrace();
-                            }
-        }
-        if(ae.getSource() == b4){
-            this.setVisible(false);
-	new Home().setVisible(true);
+            Conn con = new Conn();
+            if(ae.getSource() == b1){
+                String sql = "select * from book where book_id = ?";
+		PreparedStatement st = con.c.prepareStatement(sql);
+		st.setString(1, t1.getText());
+		ResultSet rs = st.executeQuery();
 		
+                while (rs.next()) {
+                    t2.setText(rs.getString("name"));
+                    t3.setText(rs.getString("isbn"));
+                    t4.setText(rs.getString("publisher"));
+                    t5.setText(rs.getString("price"));
+                    t6.setText(rs.getString("pages"));
+                   
+		}
+		st.close();
+		rs.close();
+		
+            }
+            if(ae.getSource() == b2){
+                String sql = "select * from student where student_id = ?";
+		PreparedStatement st = con.c.prepareStatement(sql);
+		st.setString(1, t8.getText());
+		ResultSet rs = st.executeQuery();
+		
+                while (rs.next()) {
+                    t9.setText(rs.getString("name"));
+                    t10.setText(rs.getString("father"));
+                    t11.setText(rs.getString("course"));
+                    t12.setText(rs.getString("branch"));
+                    t13.setText(rs.getString("year"));
+                    t14.setText(rs.getString("semester"));
+		}
+		st.close();
+		rs.close();
+		
+            }
+            if(ae.getSource() == b3){
+                    try{
+                String sql = "insert into issueBook(book_id, student_id, bname, sname, course, branch, dateOfIssue) values(?, ?, ?, ?, ?, ?, ?)";
+		PreparedStatement st = con.c.prepareStatement(sql);
+		st.setString(1, t1.getText());
+		st.setString(2, t8.getText());
+		st.setString(3, t2.getText());
+		st.setString(4, t9.getText());
+		st.setString(5, t11.getText());
+		st.setString(6, t12.getText());
+		st.setString(7, ((JTextField) dateChooser.getDateEditor().getUiComponent()).getText());
+		int i = st.executeUpdate();
+		if (i > 0)
+                    JOptionPane.showMessageDialog(null, "Successfully Book Issued..!");
+		else
+                    JOptionPane.showMessageDialog(null, "error");
+                    }catch(Exception e){
+                        e.printStackTrace();
+                                }
+            }
+            if(ae.getSource() == b4){
+                this.setVisible(false);
+		new Home().setVisible(true);
+			
+            }
+            
+            con.c.close();
+        }catch(Exception e){
+            
         }
-        
-        con.c.close();
-    }catch(Exception e){
-        
     }
-}
 }

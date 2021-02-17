@@ -15,8 +15,9 @@ public class Home extends JFrame implements ActionListener{
 	}
         
         public Home() {
-	
-            setBounds(400, 150, 1000, 800);
+        	super("Home - Library Management System ");
+            setBounds(400, 100, 950, 800);
+            setLocation(190, 0);
             contentPane = new JPanel();
             setContentPane(contentPane);
             contentPane.setLayout(null);
@@ -25,7 +26,7 @@ public class Home extends JFrame implements ActionListener{
             JMenuBar menuBar = new JMenuBar();
             menuBar.setBorder(new EtchedBorder(EtchedBorder.LOWERED,new Color(0,128,0), new Color(128,128,128)));
             menuBar.setBackground(Color.cyan);
-            menuBar.setBounds(0,10,1000,35);
+            menuBar.setBounds(0,0,950,35);
             contentPane.add(menuBar);
             
             //Menu Exit
@@ -45,22 +46,7 @@ public class Home extends JFrame implements ActionListener{
             mntmExit.addActionListener(this);
             mnExit.add(mntmExit);
             
-            //Menu Help
-            JMenu mnHelp = new JMenu("Help");
-            mnHelp.setFont(new Font("Trebuchet MS", Font.BOLD, 17));
-            
-            //MenuItems for Help
-            JMenuItem mntmReadme = new JMenuItem("Read Me");
-            mntmReadme.setBackground(new Color(211, 211, 211));
-            mntmReadme.setForeground(new Color(105, 105, 105));
-            mnHelp.add(mntmReadme);
-
-            JMenuItem mntmAboutUs = new JMenuItem("About Us");
-            mntmAboutUs.setForeground(new Color(105, 105, 105));
-            mntmAboutUs.setBackground(new Color(211, 211, 211));
-            mntmAboutUs.addActionListener(this);
-            mnHelp.add(mntmAboutUs);
-            
+         
             //Menu  Record
             JMenu mnRecord = new JMenu("Record");
             mnRecord.setFont(new Font("Trebuchet MS", Font.BOLD, 17));
@@ -80,7 +66,6 @@ public class Home extends JFrame implements ActionListener{
             
             //Adding menu in Menubar
             menuBar.add(mnRecord);
-            menuBar.add(mnHelp);
             menuBar.add(mnExit);
             
             //Labels
@@ -210,11 +195,6 @@ public class Home extends JFrame implements ActionListener{
         	}else if(msg.equals("Exit")) 
         		System.exit(ABORT);
         	
-        	else if(msg.equals("Read Me"))
-        		new ReadME().setVisible(true);
-        	else if(msg.equals("About Us"))
-        		new AboutUs().setVisible(true);
-        	
         	else if(msg.equals("Book Details")) {
         		setVisible(false);
         		new BookDetails().setVisible(true);
@@ -245,14 +225,9 @@ public class Home extends JFrame implements ActionListener{
                 new ReturnBook().setVisible(true);
             
             }
-            if(ae.getSource() == b6){
-                this.setVisible(false);
-                new aboutUs().setVisible(true);
             
             }
             
         		
         	}
-        }
         
-}

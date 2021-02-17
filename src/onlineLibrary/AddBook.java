@@ -19,7 +19,7 @@ public class AddBook extends JFrame implements ActionListener{
     }
 
     public void random() {
-        Random rd = new Random();
+    Random rd = new Random();
 	t1.setText("" + rd.nextInt(1000 + 1));
     }
 
@@ -71,6 +71,7 @@ public class AddBook extends JFrame implements ActionListener{
 	t1.setFont(new Font("Trebuchet MS", Font.BOLD, 14));
 	t1.setBounds(169, 54, 198, 20);
 	contentPane.add(t1);
+	t1.setEditable(false);
 	t1.setColumns(10);
 
 	t2 = new JTextField();

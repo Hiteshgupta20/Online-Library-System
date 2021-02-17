@@ -47,7 +47,7 @@ public class Loading extends JFrame implements Runnable {
            
             super("Loading");
             th = new Thread((Runnable) this);
-
+            setLocation(0,100);
             setBounds(600, 300, 600, 400);
             contentPane = new JPanel();
             setContentPane(contentPane);

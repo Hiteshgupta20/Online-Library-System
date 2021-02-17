@@ -25,6 +25,7 @@ public class Signup extends JFrame implements ActionListener{
     //Frame width
     super("Signup");
     setBounds(500, 220, 606, 406);
+    setLocation(400,200);
 	contentPane = new JPanel();
 	contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 	setContentPane(contentPane);
@@ -140,11 +141,10 @@ public class Signup extends JFrame implements ActionListener{
     			int i= st.executeUpdate();
     			if(i>0)
     				JOptionPane.showMessageDialog(null, "Succesfully Created" );
+    			this.setVisible(false);
+    			new Login_user().setVisible(true);
     		
-    		textField.setText("");
-    		textField_1.setText("");
-    		passwordField_2.setText("");
-    		textField_3.setText("");
+    		
     		
     		}	
     		}

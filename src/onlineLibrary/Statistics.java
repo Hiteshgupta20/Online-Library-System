@@ -43,6 +43,7 @@ public class Statistics extends JFrame{
     }
 
     public Statistics() {
+    super("Statistics");
     setBounds(400, 200, 810, 594);
     setLocation(230, 100);
 	contentPane = new JPanel();

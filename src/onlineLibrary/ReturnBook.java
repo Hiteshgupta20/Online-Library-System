@@ -32,17 +32,20 @@ public class ReturnBook extends JFrame implements ActionListener{
             st.setString(1, textField.getText());
             int i = st.executeUpdate();
             if (i > 0)
-                JOptionPane.showConfirmDialog(null, "Book Returned");
+                JOptionPane.showMessageDialog(null, "Book Returned");
             else
                 JOptionPane.showMessageDialog(null, "error in Deleting");
         } catch (SQLException e) {
             JOptionPane.showMessageDialog(null, e);
             e.printStackTrace();
 	}
+        this.setVisible(false);
+        new Home().setVisible(true);
     }
 
     
     public ReturnBook() {
+    super("Return Book");
     setBounds(450, 300, 617, 363);
     setLocation(350,150);
 	contentPane = new JPanel();

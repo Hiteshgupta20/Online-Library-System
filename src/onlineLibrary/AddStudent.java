@@ -19,12 +19,12 @@ public class AddStudent extends JFrame implements ActionListener{
     }
 
     public void random() {
-        Random rd = new Random();
+    Random rd = new Random();
 	t1.setText("" + rd.nextInt(10000 + 1));
     }
 
     public AddStudent() {
-     super("Add Student");
+	super("Add Student");
 	setBounds(700, 200, 550, 450);
 	setLocation(450,150);
 	contentPane = new JPanel();

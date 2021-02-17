@@ -35,6 +35,7 @@ public class BookDetails extends JFrame implements ActionListener{
     }
 
     public BookDetails() {
+    	super("Book Details");
         setBounds(350, 200, 890, 475);
         setLocation(300,150);
         contentPane = new JPanel();

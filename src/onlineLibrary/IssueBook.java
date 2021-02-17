@@ -19,6 +19,7 @@ public class IssueBook extends JFrame implements ActionListener{
     }
 
     public IssueBook() {
+    super("Issue Book");
 	setBounds(300, 200, 900, 500);
 	setLocation(300,150);
 	contentPane = new JPanel();
@@ -329,6 +330,8 @@ public class IssueBook extends JFrame implements ActionListener{
                     JOptionPane.showMessageDialog(null, "Successfully Book Issued..!");
 		else
                     JOptionPane.showMessageDialog(null, "error");
+					this.setVisible(false);
+					new Home().setVisible(true);
                     }catch(Exception e){
                         e.printStackTrace();
                                 }

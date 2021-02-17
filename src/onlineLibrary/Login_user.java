@@ -13,7 +13,7 @@ public  class Login_user extends JFrame implements ActionListener{
 
 
 	public Login_user() {
-            
+    super("Login");
 	setBackground(new Color(169, 169, 169));	
     setBounds(600, 400, 550, 300);
 	setLocation(400,200);

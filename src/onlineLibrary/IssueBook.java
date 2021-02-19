@@ -20,8 +20,9 @@ public class IssueBook extends JFrame implements ActionListener{
 
     public IssueBook() {
     super("Issue Book");
-	setBounds(300, 200, 900, 500);
-	setLocation(300,150);
+	setSize(900, 500);
+	setLocationRelativeTo(null);
+	setResizable(false);
 	contentPane = new JPanel();
 	contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 	setContentPane(contentPane);
@@ -284,36 +285,36 @@ public class IssueBook extends JFrame implements ActionListener{
 		st.setString(1, t1.getText());
 		ResultSet rs = st.executeQuery();
 		
-                while (rs.next()) {
+               while (rs.next()) {
                     t2.setText(rs.getString("name"));
                     t3.setText(rs.getString("isbn"));
                     t4.setText(rs.getString("publisher"));
                     t5.setText(rs.getString("price"));
                     t6.setText(rs.getString("pages"));
-                   
-		}
-		st.close();
-		rs.close();
-		
+            }	
+               if(!rs.next()) 
+            	   JOptionPane.showMessageDialog(null, "Invalid Book Id");
+               
             }
+           
+                        
             if(ae.getSource() == b2){
                 String sql = "select * from student where student_id = ?";
-		PreparedStatement st = con.c.prepareStatement(sql);
-		st.setString(1, t8.getText());
-		ResultSet rs = st.executeQuery();
+				PreparedStatement st = con.c.prepareStatement(sql);
+				st.setString(1, t8.getText());
+				ResultSet rs = st.executeQuery();
 		
-                while (rs.next()) {
+                while(rs.next()) {
                     t9.setText(rs.getString("name"));
                     t10.setText(rs.getString("father"));
                     t11.setText(rs.getString("course"));
                     t12.setText(rs.getString("branch"));
                     t13.setText(rs.getString("year"));
                     t14.setText(rs.getString("semester"));
-		}
-		st.close();
-		rs.close();
-		
-            }
+                    }
+            	if(!rs.next()) 
+             	   JOptionPane.showMessageDialog(null, "Invalid Student Id");
+                            }
             if(ae.getSource() == b3){
                     try{
                 String sql = "insert into issueBook(book_id, student_id, bname, sname, course, branch, dateOfIssue) values(?, ?, ?, ?, ?, ?, ?)";

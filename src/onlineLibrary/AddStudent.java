@@ -26,7 +26,8 @@ public class AddStudent extends JFrame implements ActionListener{
     public AddStudent() {
 	super("Add Student");
 	setBounds(700, 200, 550, 450);
-	setLocation(450,150);
+	setLocationRelativeTo(null);
+	setResizable(false);
 	contentPane = new JPanel();
 	contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 	setContentPane(contentPane);

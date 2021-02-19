@@ -13,8 +13,8 @@ public class LibraryManagementSystem extends JFrame implements ActionListener{
         		super("Library Management System");
                 setSize(900,390);
                 setLayout(null);
-                setLocation(170,170);
-
+                setLocationRelativeTo(null);
+            	setResizable(false);
                 l1 = new JLabel("");
                 b1 = new JButton("Next");
                 b1.setFont(new Font("Trebuchet MS", Font.BOLD, 14));

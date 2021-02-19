@@ -25,7 +25,8 @@ public class Signup extends JFrame implements ActionListener{
     //Frame width
     super("Signup");
     setBounds(500, 220, 606, 406);
-    setLocation(400,200);
+    setLocationRelativeTo(null);
+	setResizable(false);
 	contentPane = new JPanel();
 	contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 	setContentPane(contentPane);

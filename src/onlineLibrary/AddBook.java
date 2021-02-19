@@ -26,7 +26,8 @@ public class AddBook extends JFrame implements ActionListener{
     public AddBook() {
     super("Add Book");
     setBounds(580, 200, 480, 402);
-    setLocation(450,150);
+    setLocationRelativeTo(null);
+	setResizable(false);
 	contentPane = new JPanel();
 	contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 	setContentPane(contentPane);

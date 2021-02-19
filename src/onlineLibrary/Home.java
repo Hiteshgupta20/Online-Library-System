@@ -17,7 +17,8 @@ public class Home extends JFrame implements ActionListener{
         public Home() {
         	super("Home - Library Management System ");
             setBounds(400, 100, 950, 800);
-            setLocation(190, 0);
+            setLocationRelativeTo(null);
+        	setResizable(false);
             contentPane = new JPanel();
             setContentPane(contentPane);
             contentPane.setLayout(null);

@@ -19,6 +19,8 @@ public class Forgot extends JFrame implements ActionListener{
     public Forgot() {
 
     setBounds(500, 200, 650, 500);		//Size of frame
+    setLocationRelativeTo(null);
+	setResizable(false);
 	contentPane = new JPanel();	
 	contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 	setContentPane(contentPane);

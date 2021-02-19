@@ -36,6 +36,8 @@ public class StudentDetails extends JFrame implements ActionListener{
 
     public StudentDetails() {
         setBounds(350, 200, 890, 475);
+        setLocationRelativeTo(null);
+    	setResizable(false);
         contentPane = new JPanel();
         contentPane.setBackground(Color.WHITE);
         contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));

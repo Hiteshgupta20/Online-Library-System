@@ -47,7 +47,8 @@ public class ReturnBook extends JFrame implements ActionListener{
     public ReturnBook() {
     super("Return Book");
     setBounds(450, 300, 617, 363);
-    setLocation(350,150);
+    setLocationRelativeTo(null);
+	setResizable(false);
 	contentPane = new JPanel();
 	contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 	setContentPane(contentPane);
@@ -204,13 +205,16 @@ public class ReturnBook extends JFrame implements ActionListener{
 			st.setString(2, textField.getText());
 			ResultSet rs = st.executeQuery();
 		
-                while (rs.next()) {
+                while(rs.next()) {
                     textField_2.setText(rs.getString("bname"));
                     textField_3.setText(rs.getString("sname"));
                     textField_4.setText(rs.getString("course"));
                     textField_5.setText(rs.getString("branch"));
                     textField_6.setText(rs.getString("dateOfIssue"));
-		}}
+		}
+                if(!rs.next())
+                	JOptionPane.showMessageDialog(null, "Invalid Book Id and Student Id");
+}
             
             if(ae.getSource() == b2){
                 String sql = "insert into returnBook(book_id, student_id, bname, sname,course, branch, dateOfIssue, dateOfReturn) values(?, ?, ?, ?, ?, ?, ?, ?)";

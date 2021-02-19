@@ -16,7 +16,8 @@ public  class Login_user extends JFrame implements ActionListener{
     super("Login");
 	setBackground(new Color(169, 169, 169));	
     setBounds(600, 400, 550, 300);
-	setLocation(400,200);
+    setLocationRelativeTo(null);
+	setResizable(false);
     panel = new JPanel();
 	panel.setBackground(new Color(176, 224, 230));
 	setContentPane(panel);
